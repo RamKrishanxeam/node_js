@@ -13,8 +13,8 @@ router.post("/create-payment-session", async function (req, res) {
       payment_method_types: ["card"],
       line_items: line_items,
       mode: "payment",
-      success_url: "https://node-js-9c2b.onrender.com/success",
-      cancel_url: "https://node-js-9c2b.onrender.com/cancel",
+      success_url: "https://cycle-farm.vercel.app/success",
+      cancel_url: "https://cycle-farm.vercel.app/cancel",
       invoice_creation: {
         enabled: true,
       },
