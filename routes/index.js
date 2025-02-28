@@ -5,16 +5,16 @@ const router = express.Router();
 
 router.post("/create-payment-session", async function (req, res) {
   const { line_items } = req.body;
-  console.log(line_items)
-  console.log("sdsdd")                                                                      
+  console.log(line_items);
+  console.log("sdsdd");
 
   try {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       line_items: line_items,
       mode: "payment",
-      success_url: "http://localhost:3000/success",
-      cancel_url: "http://localhost:3000/cancel",
+      success_url: "https://node-js-9c2b.onrender.com/success",
+      cancel_url: "https://node-js-9c2b.onrender.com/cancel",
       invoice_creation: {
         enabled: true,
       },
